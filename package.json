@@ -28,7 +28,8 @@
     "prepublishOnly": "/bin/sh ./scripts/prepublish.sh && npm run build",
     "preversion": ". ./scripts/checkgit.sh && npm test",
     "db-build": "TZ=UTC babel-node test-api/data/build.js",
-    "db-shell": "sqlite3 --column --header test-api/data/db/demo-data.sl3"
+    "db-shell": "sqlite3 --column --header test-api/data/db/demo-data.sl3",
+    "postinstall": "postinstall-build dist"
   },
   "ava": {
     "concurrency": 10,
@@ -105,6 +106,7 @@
     "deprecate": "^1.0.0",
     "generatorics": "^1.0.8",
     "graphql-relay": "^0.5.0",
-    "lodash": "^4.13.1"
+    "lodash": "^4.13.1",
+    "postinstall-build": "^5.0.1"
   }
 }
