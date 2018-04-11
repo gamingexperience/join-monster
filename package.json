@@ -7,7 +7,8 @@
     "node": ">=6.0.0"
   },
   "files": [
-    "dist/"
+    "dist/",
+    "src/"
   ],
   "scripts": {
     "build": "rm -rf dist && babel src --no-comments --out-dir dist",
